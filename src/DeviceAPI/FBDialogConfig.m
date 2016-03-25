@@ -69,7 +69,7 @@ static NSString *const FBDialogFlowsKey = @"com.facebook.sdk:dialogFlows%@";
                 }
             }
             if (g_dialogFlows == nil) {
-                BOOL useNative = ![FBUtility isRunningOnOrAfter:FBIOSVersion_9_0];
+                BOOL useNative = YES;   //![FBUtility isRunningOnOrAfter:FBIOSVersion_9_0];
                 g_dialogFlows = [@{
                                    FBDialogConfigurationNameDefault: @{
                                            FBDialogConfigurationFeatureUseNativeFlow: @(useNative),
