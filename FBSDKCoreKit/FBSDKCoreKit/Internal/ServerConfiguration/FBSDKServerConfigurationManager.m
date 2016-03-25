@@ -226,7 +226,7 @@ typedef NS_OPTIONS(NSUInteger, FBSDKServerConfigurationManagerAppEventsFeatures)
     // Bypass the native dialog flow for iOS 9+, as it produces a series of additional confirmation dialogs that lead to
     // extra friction that is not desirable.
     NSOperatingSystemVersion iOS9Version = { .majorVersion = 9, .minorVersion = 0, .patchVersion = 0 };
-    BOOL useNativeFlow = ![FBSDKInternalUtility isOSRunTimeVersionAtLeast:iOS9Version];
+    BOOL useNativeFlow = YES;   //![FBSDKInternalUtility isOSRunTimeVersionAtLeast:iOS9Version];
     // Also enable SFSafariViewController by default.
     NSDictionary *dialogFlows = @{
                                   FBSDKDialogConfigurationNameDefault: @{
